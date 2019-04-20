@@ -371,8 +371,8 @@ header #header-bar #header-menu-left #playgroundDropdown {
     left: -10px;
 }
 #board-info #board-info-profile-img:hover{
-    -webkit-animation: slide-rotate-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-     animation: slide-rotate-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: swing-top-left-fwd 1s linear both;
+	animation: swing-top-left-fwd 1s linear both;
 }
 
 #board-info{
@@ -453,5 +453,20 @@ header {
   100% {
     -webkit-transform: translateX(-150px) rotateY(90deg);
             transform: translateX(-150px) rotateY(90deg);
+  }
+}
+
+@keyframes swing-top-left-fwd {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+            transform: rotate3d(-1, 1, 0, -180deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
   }
 }
